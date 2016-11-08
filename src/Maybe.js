@@ -62,7 +62,7 @@ Nothing.prototype.concat = util.identity;
 
 // functor
 Just.prototype.map = function(f) {
-  return this.of(f(this.value));
+  return Maybe(f(this.value));
 };
 
 Nothing.prototype.map = util.returnThis;
